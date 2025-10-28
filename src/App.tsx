@@ -21,7 +21,7 @@ export const App: React.FC = () => {
 
         <RSVPForm />
         <footer className="text-center text-gray-700 mt-8">
-          <p className="text-sm">С любовью ждём вас на празднике! ❤️</p>
+          <p className="text-sm">Ждём вас! ❤️</p>
         </footer>
       </div>
     </main>
