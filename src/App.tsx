@@ -1,6 +1,7 @@
 import React from "react";
 import { Header } from "./components/Header";
 import { EventDetails } from "./components/EventDetails";
+import { WishlistBlock } from "./components/WishlistBlock";
 import { RSVPForm } from "./components/RSVPForm";
 
 export const App: React.FC = () => {
@@ -19,6 +20,7 @@ export const App: React.FC = () => {
           <span className="text-2xl">🎈</span>
         </div>
 
+        <WishlistBlock />
         <RSVPForm />
         <footer className="text-center text-gray-700 mt-8">
           <p className="text-sm">Ждём вас! ❤️</p>
