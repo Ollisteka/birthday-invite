@@ -1,42 +1,41 @@
 import React from "react";
 
+const handleTelegramClick = (message: string) => {
+  const encodedMessage = encodeURIComponent(message);
+  const telegramUrl = `https://t.me/olga_zhukova?text=${encodedMessage}`;
+  window.open(telegramUrl, "_blank");
+};
+
 export const RSVPForm: React.FC = () => {
   return (
     <section className="bg-white rounded-2xl shadow-lg p-6 mb-6">
       <div className="text-center mb-6">
         <h2 className="text-pink-600 text-lg font-bold mb-2">
-          Подтвердите присутствие
-        </h2>
-        <p className="text-gray-700 text-sm">
           Дайте нам знать, что вы придёте!
-        </p>
+        </h2>
       </div>
 
-      <form className="space-y-4">
-        <div>
-          <label
-            htmlFor="guestName"
-            className="block text-gray-700 text-sm font-medium mb-2"
-          >
-            Ваше имя
-          </label>
-          <input
-            type="text"
-            id="guestName"
-            name="guestName"
-            placeholder="Введите ваше имя"
-            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent"
-          />
-        </div>
-
+      <div className="space-y-3">
         <button
-          type="submit"
-          className="w-full bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-6 rounded-xl transition-colors duration-200 flex items-center justify-center space-x-2"
+          onClick={() => handleTelegramClick("Привет! Мы обязательно придём")}
+          className="w-full bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-6 rounded-xl transition-colors duration-200 flex items-center justify-center space-x-2 cursor-pointer"
         >
-          <span>Подтвердить присутствие</span>
+          <span>Мы придём</span>
           <span>✓</span>
         </button>
-      </form>
+
+        <button
+          onClick={() =>
+            handleTelegramClick(
+              "Привет! Мы не сможем прийти в этот день, но сможем зайти в другой"
+            )
+          }
+          className="w-full bg-gray-400 hover:bg-gray-500 text-white font-bold py-3 px-6 rounded-xl transition-colors duration-200 flex items-center justify-center space-x-2 cursor-pointer"
+        >
+          <span>Не сможем прийти</span>
+          <span>✗</span>
+        </button>
+      </div>
     </section>
   );
 };
