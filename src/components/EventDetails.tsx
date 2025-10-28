@@ -6,7 +6,7 @@ export const EventDetails: React.FC = () => {
       <div className="text-center mb-6">
         <div className="text-4xl mb-2">🎂</div>
         <h2 className="text-pink-600 text-lg font-bold mb-2">
-          Нашей Варюше исполняется 1 годик! ❤️
+          Нашей Варюше исполняется 1 годик!
         </h2>
         <p className="text-gray-700 text-sm">
           Мы будем рады видеть вас на празднике!
@@ -28,14 +28,6 @@ export const EventDetails: React.FC = () => {
           <span className="text-pink-500">📍</span>
           <span className="text-gray-700">У нас в гостях</span>
         </div>
-      </div>
-
-      <hr className="border-gray-200 mt-6" />
-
-      <div className="text-center mt-6">
-        <p className="text-gray-700 text-sm">
-          Будем рады разделить с вами этот особенный день! ❤️
-        </p>
       </div>
     </section>
   );
