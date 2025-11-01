@@ -1,12 +1,13 @@
 import React from "react";
-import { Header } from "./components/Header";
+
 import { EventDetails } from "./components/EventDetails";
-import { WishlistBlock } from "./components/WishlistBlock";
+import { Header } from "./components/Header";
 import { RSVPForm } from "./components/RSVPForm";
+import { WishlistBlock } from "./components/WishlistBlock";
 
 export const App: React.FC = () => {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-pink-50 to-purple-200">
+    <main className="min-h-screen bg-linear-to-b from-pink-50 to-purple-200">
       <div className="container mx-auto px-4 py-8 max-w-md">
         <Header />
         <EventDetails />

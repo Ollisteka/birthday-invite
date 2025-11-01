@@ -6,6 +6,7 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
 import prettier from 'eslint-plugin-prettier';
 import prettierConfig from 'eslint-config-prettier';
+import perfectionist from 'eslint-plugin-perfectionist';
 
 export default [
   js.configs.recommended,
@@ -31,6 +32,7 @@ export default [
       'react-hooks': reactHooks,
       'jsx-a11y': jsxA11y,
       prettier,
+      perfectionist,
     },
     rules: {
       ...typescript.configs.recommended.rules,
@@ -38,6 +40,10 @@ export default [
       ...reactHooks.configs.recommended.rules,
       ...jsxA11y.configs.recommended.rules,
       ...prettierConfig.rules,
+      'complexity': ['error', 10 ],
+      'max-depth': ['error',  5 ],
+      'max-lines-per-function': ['error', { max: 100, skipBlankLines: true, skipComments: true }],
+      'max-params': ['error', { max: 3 }],
       'prettier/prettier': 'error',
       'semi': ['error', 'always'],
       'curly': ['error', 'all'],
@@ -49,10 +55,40 @@ export default [
       '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
       '@typescript-eslint/no-explicit-any': 'warn',
       'jsx-a11y/anchor-is-valid': 'off',
+      'perfectionist/sort-imports': ['error', {
+        type: 'alphabetical',
+        order: 'asc',
+        ignoreCase: true,
+      }],
+      'perfectionist/sort-exports': ['error', {
+        type: 'alphabetical',
+        order: 'asc',
+      }],
+      'perfectionist/sort-object-types': ['error', {
+        type: 'alphabetical',
+        order: 'asc',
+      }],
+      'perfectionist/sort-interfaces': ['error', {
+        type: 'alphabetical',
+        order: 'asc',
+      }],
+      'perfectionist/sort-named-imports': ['error', {
+        type: 'alphabetical',
+        order: 'asc',
+      }],
+      'perfectionist/sort-named-exports': ['error', {
+        type: 'alphabetical',
+        order: 'asc',
+      }],
     },
     settings: {
       react: {
         version: 'detect',
+      },
+      perfectionist: {
+        type: 'alphabetical',
+        order: 'asc',
+        ignoreCase: true,
       },
     },
   },
