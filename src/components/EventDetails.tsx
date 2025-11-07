@@ -1,8 +1,10 @@
 import React from "react";
 
+import { Card } from "./Card";
+
 export const EventDetails: React.FC = () => {
   return (
-    <section className="bg-white rounded-2xl shadow-lg p-6 mb-6">
+    <Card>
       <div className="text-center mb-6">
         <div className="text-4xl mb-2">🎂</div>
         <h2 className="text-pink-600 text-lg font-bold mb-2">
@@ -29,6 +31,6 @@ export const EventDetails: React.FC = () => {
           <span className="text-gray-700">У нас в гостях</span>
         </div>
       </div>
-    </section>
+    </Card>
   );
 };

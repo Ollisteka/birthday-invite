@@ -1,8 +1,10 @@
 import React from "react";
 
+import { Card } from "./Card";
+
 export const WishlistBlock: React.FC = () => {
   return (
-    <section className="bg-white rounded-2xl shadow-lg p-6 mb-6">
+    <Card>
       <div className="text-center">
         <h2 className="text-purple-700 text-xl font-bold mb-2">Подарки </h2>
 
@@ -20,6 +22,6 @@ export const WishlistBlock: React.FC = () => {
           <span>✨</span>
         </a>
       </div>
-    </section>
+    </Card>
   );
 };

@@ -1,5 +1,7 @@
 import React from "react";
 
+import { Card } from "./Card";
+
 const handleTelegramClick = (message: string) => {
   const encodedMessage = encodeURIComponent(message);
   const telegramUrl = `https://t.me/olga_zhukova?text=${encodedMessage}`;
@@ -8,7 +10,7 @@ const handleTelegramClick = (message: string) => {
 
 export const RSVPForm: React.FC = () => {
   return (
-    <section className="bg-white rounded-2xl shadow-lg p-6 mb-6">
+    <Card>
       <div className="text-center mb-6">
         <h2 className="text-pink-600 text-lg font-bold mb-2">
           Дайте нам знать, что вы придёте!
@@ -36,6 +38,6 @@ export const RSVPForm: React.FC = () => {
           <span>✗</span>
         </button>
       </div>
-    </section>
+    </Card>
   );
 };
