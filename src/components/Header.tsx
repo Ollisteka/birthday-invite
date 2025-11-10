@@ -6,7 +6,7 @@ export const Header: React.FC = () => {
       <div className="relative rounded-2xl overflow-hidden shadow-lg">
         <div className="h-48 bg-linear-to-br from-pink-200 to-purple-200 relative overflow-hidden">
           <img
-            src="/feets.jpg"
+            src="feets.jpg"
             alt="Варины ножки"
             className="absolute inset-0 w-full h-full object-cover"
           />
