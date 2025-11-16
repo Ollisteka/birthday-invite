@@ -24,7 +24,7 @@ export const EventDetails: React.FC = () => {
         </div>
         <div className="flex items-center justify-center space-x-2">
           <span className="text-pink-500">🕐</span>
-          <span className="text-gray-700">14:00</span>
+          <span className="text-gray-700">13:00</span>
         </div>
         <div className="flex items-center justify-center space-x-2">
           <span className="text-pink-500">📍</span>
