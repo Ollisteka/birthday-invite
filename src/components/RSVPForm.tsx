@@ -2,24 +2,25 @@ import React from "react";
 
 import { Card } from "./Card";
 
-const handleTelegramClick = (message: string) => {
+const handleMaxClick = (message: string) => {
   const encodedMessage = encodeURIComponent(message);
-  const telegramUrl = `https://t.me/olga_zhukova?text=${encodedMessage}`;
-  window.open(telegramUrl, "_blank");
+  const maxUrl = `https://max.ru/:share?text=${encodedMessage}`;
+  window.open(maxUrl, "_blank");
 };
 
 export const RSVPForm: React.FC = () => {
   return (
-    <Card>
-      <div className="text-center mb-6">
-        <h2 className="text-pink-600 text-lg font-bold mb-2">
-          Дайте нам знать, что вы придёте!
-        </h2>
-      </div>
-
+    <Card className="text-center">
+      <h2 className="text-pink-600 text-lg font-bold  mb-2">
+        Дайте нам знать, что вы придёте!
+      </h2>
+      <p className="text-gray-700 text-sm mb-6">
+        Кликните на&nbsp;нужный вариант&nbsp;&mdash; откроется окошко
+        в&nbsp;Максе. Выберите получателем Олю и&nbsp;отправьте сообщение.
+      </p>
       <div className="space-y-3">
         <button
-          onClick={() => handleTelegramClick("Привет! Мы обязательно придём")}
+          onClick={() => handleMaxClick("Привет! Мы обязательно придём")}
           className="w-full bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-6 rounded-xl transition-colors duration-200 flex items-center justify-center space-x-2 cursor-pointer"
         >
           <span>Мы придём</span>
@@ -28,7 +29,7 @@ export const RSVPForm: React.FC = () => {
 
         <button
           onClick={() =>
-            handleTelegramClick(
+            handleMaxClick(
               "Привет! Мы не сможем прийти в этот день, но сможем зайти в другой"
             )
           }
