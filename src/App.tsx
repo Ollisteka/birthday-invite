@@ -7,7 +7,7 @@ import { WishlistBlock } from "./components/WishlistBlock";
 
 export const App: React.FC = () => {
   return (
-    <main className="min-h-screen bg-linear-to-b from-pink-50 to-purple-200">
+    <main className="min-h-screen bg-linear-to-b from-page-start to-page-end">
       <div className="container mx-auto px-4 py-8 max-w-md">
         <Header />
         <EventDetails />
@@ -23,7 +23,7 @@ export const App: React.FC = () => {
 
         <WishlistBlock />
         <RSVPForm />
-        <footer className="text-center text-gray-700 mt-8">
+        <footer className="text-center text-body mt-8">
           <p className="text-sm">Ждём вас! ❤️</p>
         </footer>
       </div>
