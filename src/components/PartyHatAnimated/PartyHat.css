@@ -1,0 +1,36 @@
+.party-hat__drawing path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 3.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  visibility: hidden;
+  animation: party-hat-draw 0.15s cubic-bezier(0.65, 0.05, 0.36, 1) forwards;
+}
+
+@keyframes party-hat-draw {
+  from {
+    visibility: visible;
+      fill: none;
+
+  }
+
+  to {
+    visibility: visible;
+    stroke-dashoffset: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .party-hat__drawing {
+    filter: none;
+  }
+
+  .party-hat__drawing path {
+    animation: none;
+    visibility: visible;
+    stroke-dashoffset: 0;
+  }
+}
