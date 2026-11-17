@@ -27,3 +27,14 @@ body {
 #root {
   min-height: 100vh;
 }
+
+.app {
+  position: relative;
+  min-height: 100vh;
+  background-image:
+    url("/pattern.svg"),
+    linear-gradient(to bottom, var(--color-page-start), var(--color-page-end));
+  background-size: 500px 500px, cover;
+  background-repeat: repeat;
+}
+
