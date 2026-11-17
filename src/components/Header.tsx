@@ -4,7 +4,7 @@ import { PartyHat } from "./PartyHatAnimated/PartyHat";
 
 export const Header: React.FC = () => {
   return (
-    <header className="mb-6 relative bg-page-start shadow-[0_0_10px_20px] shadow-page-start">
+    <header className="mb-7 relative bg-page-start/90 shadow-[0_0_30px_20px] shadow-page-start rounded-full">
       {/* Колпак скейлится вместе с картинкой ниже размером 422 × 334 */}
       <PartyHat className="absolute left-[calc(115/422*100%)] top-[calc(-10/334*100%)] h-auto w-[calc(96/422*100%)]" />
       <img
