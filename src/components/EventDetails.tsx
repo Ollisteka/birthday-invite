@@ -13,7 +13,7 @@ export const EventDetails: React.FC = () => {
       <div className="space-y-4 text-center text-sm">
         <div className="flex items-center justify-center space-x-2">
           <span className="text-accent">📅</span>
-          <span className="text-body">19 или 20 декабря 2026 года</span>
+          <span className="text-body">19 декабря 2026 года</span>
         </div>
         <div className="flex items-center justify-center space-x-2">
           <span className="text-accent">🕐</span>
